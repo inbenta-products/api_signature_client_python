@@ -1,0 +1,6 @@
+[run]
+omit = 
+    inbenta_api_signature/__version__.py
+
+source = 
+    inbenta_api_signature
