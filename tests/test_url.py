@@ -11,8 +11,9 @@ from inbenta_api_signature import url
     ('foo/bar?q[]=1&q[]=2', {'q': ['1','2']}),
     ('foo/bar?q[]=1,2&q[]=3,4', {'q': ['1,2', '3,4']}),
     ('foo/?uq=%22pregunta%20en%20catal%5Cu00e0%22', {'uq': '"pregunta en catal\\u00e0"'}),
-    ('foo/?uq=%22pregunta%20en%20catal%5Cu00e0%22', {'uq': '"pregunta en catal\\u00e0"'}),
-    ('foo/?a=pregunta+en+catal%C3%A0', {'a': 'pregunta en català'})
+    ('foo/?a=pregunta+en+catal%C3%A0', {'a': 'pregunta en català'}),
+    ('foo/?tz=Europe/Madrid', {'tz': 'Europe/Madrid'}),
+    ('foo/?tz=Europe%2FMadrid', {'tz': 'Europe/Madrid'}),
 ])
 def test_queryparams(test_input, expected):
     # Should match with php parse_str() function

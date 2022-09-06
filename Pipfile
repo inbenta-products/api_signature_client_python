@@ -8,5 +8,6 @@ pytest = "*"
 tox = "*"
 coverage = "*"
 freezegun = "*"
+requests = "*"
 
 [packages]

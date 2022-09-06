@@ -96,7 +96,7 @@ class V1(BaseVersion):
         '''
         query = {k: unquote_plus(json.dumps(v)) for k, v in queryString.items()}
         query = ["{}={}".format(k, query[k]) for k in sorted(query)]
-        return quote("&".join(query))
+        return quote("&".join(query), safe='')
 
     def _sign(self, baseString):
         return hmac.new(self._key, baseString, self.HASH_ALGORITHM).hexdigest()

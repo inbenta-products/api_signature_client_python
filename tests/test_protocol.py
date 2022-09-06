@@ -155,8 +155,8 @@ def test_protocol_v1_querystring(test_input, expected):
             "response_baseString": 'v1&1552647740&%22%7B%5C%22total_count%5C%22%3A2%2C%5C%22offset%5C%22%3A0%2C%5C%22length%5C%22%3A1000%2C%5C%22results%5C%22%3A%5B%7B%5C%22event_id%5C%22%3A%5C%22bG9nOjozOTYwNjA5NTE4MzQ1MTA4ODM%3D%5C%22%2C%5C%22date%5C%22%3A%5C%222019-01-10T09%3A38%3A13%2B00%3A00%5C%22%2C%5C%22user_question%5C%22%3A%5C%22How+can+I+book+a+flight%3F%5C%22%2C%5C%22log_type%5C%22%3A%5C%22SEARCH%5C%22%2C%5C%22has_matching%5C%22%3Atrue%2C%5C%22matchings%5C%22%3A%5B%7B%5C%22id_content%5C%22%3A25%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A30%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A1%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A13%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A16%2C%5C%22external%5C%22%3Afalse%7D%5D%2C%5C%22user_type%5C%22%3A0%2C%5C%22env%5C%22%3A%5C%22production%5C%22%7D%2C%7B%5C%22event_id%5C%22%3A%5C%22bG9nOjozOTYwNjA5NTAyNjMwMDY5OTI%3D%5C%22%2C%5C%22date%5C%22%3A%5C%222019-01-10T09%3A38%3A06%2B00%3A00%5C%22%2C%5C%22user_question%5C%22%3A%5C%22flight%5C%22%2C%5C%22log_type%5C%22%3A%5C%22SEARCH%5C%22%2C%5C%22has_matching%5C%22%3Atrue%2C%5C%22matchings%5C%22%3A%5B%7B%5C%22id_content%5C%22%3A25%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A4%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A32%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A1%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A37%2C%5C%22external%5C%22%3Afalse%7D%5D%2C%5C%22user_type%5C%22%3A0%2C%5C%22env%5C%22%3A%5C%22production%5C%22%7D%5D%7D%22'
         },
         id="url-with-query-with-spaces-as-%20"
-    ), 
-        pytest.param(
+    ),
+    pytest.param(
         {
             "signatureKey": 'my-signature-key',
             "timestamp": 1552647740,
@@ -193,7 +193,26 @@ def test_protocol_v1_querystring(test_input, expected):
             "response_baseString": 'v1&1552647740&%22%7B%5C%22total_count%5C%22%3A2%2C%5C%22offset%5C%22%3A0%2C%5C%22length%5C%22%3A1000%2C%5C%22results%5C%22%3A%5B%7B%5C%22event_id%5C%22%3A%5C%22bG9nOjozOTYwNjA5NTE4MzQ1MTA4ODM%3D%5C%22%2C%5C%22date%5C%22%3A%5C%222019-01-10T09%3A38%3A13%2B00%3A00%5C%22%2C%5C%22user_question%5C%22%3A%5C%22How+can+I+book+a+flight%3F%5C%22%2C%5C%22log_type%5C%22%3A%5C%22SEARCH%5C%22%2C%5C%22has_matching%5C%22%3Atrue%2C%5C%22matchings%5C%22%3A%5B%7B%5C%22id_content%5C%22%3A25%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A30%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A1%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A13%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A16%2C%5C%22external%5C%22%3Afalse%7D%5D%2C%5C%22user_type%5C%22%3A0%2C%5C%22env%5C%22%3A%5C%22production%5C%22%7D%2C%7B%5C%22event_id%5C%22%3A%5C%22bG9nOjozOTYwNjA5NTAyNjMwMDY5OTI%3D%5C%22%2C%5C%22date%5C%22%3A%5C%222019-01-10T09%3A38%3A06%2B00%3A00%5C%22%2C%5C%22user_question%5C%22%3A%5C%22flight%5C%22%2C%5C%22log_type%5C%22%3A%5C%22SEARCH%5C%22%2C%5C%22has_matching%5C%22%3Atrue%2C%5C%22matchings%5C%22%3A%5B%7B%5C%22id_content%5C%22%3A25%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A4%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A32%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A1%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A37%2C%5C%22external%5C%22%3Afalse%7D%5D%2C%5C%22user_type%5C%22%3A0%2C%5C%22env%5C%22%3A%5C%22production%5C%22%7D%5D%7D%22'
         },
         id="url-with-query-with-special-chars-already-encoded"
-    ), 
+    ),
+    pytest.param(
+        {
+            "signatureKey": 'my-signature-key',
+            "timestamp": 1552647740,
+            "request": {
+                "method": "GET",
+                'url': 'v1/foo/bar?date_from=2019-01-01&date_to=2019-01-31&env=production&timezone=Asia/Tokyo',
+                'body': ''
+            },
+            "response": {
+                "body": '{"total_count":2,"offset":0,"length":1000,"results":[{"event_id":"bG9nOjozOTYwNjA5NTE4MzQ1MTA4ODM=","date":"2019-01-10T09:38:13+00:00","user_question":"How can I book a flight?","log_type":"SEARCH","has_matching":true,"matchings":[{"id_content":25,"external":false},{"id_content":30,"external":false},{"id_content":1,"external":false},{"id_content":13,"external":false},{"id_content":16,"external":false}],"user_type":0,"env":"production"},{"event_id":"bG9nOjozOTYwNjA5NTAyNjMwMDY5OTI=","date":"2019-01-10T09:38:06+00:00","user_question":"flight","log_type":"SEARCH","has_matching":true,"matchings":[{"id_content":25,"external":false},{"id_content":4,"external":false},{"id_content":32,"external":false},{"id_content":1,"external":false},{"id_content":37,"external":false}],"user_type":0,"env":"production"}]}',
+            }
+        },
+        {
+            "request_baseString": 'GET&v1%2Ffoo%2Fbar&date_from%3D%222019-01-01%22%26date_to%3D%222019-01-31%22%26env%3D%22production%22%26timezone%3D%22Asia%2FTokyo%22&1552647740&v1',
+            "response_baseString": 'v1&1552647740&%22%7B%5C%22total_count%5C%22%3A2%2C%5C%22offset%5C%22%3A0%2C%5C%22length%5C%22%3A1000%2C%5C%22results%5C%22%3A%5B%7B%5C%22event_id%5C%22%3A%5C%22bG9nOjozOTYwNjA5NTE4MzQ1MTA4ODM%3D%5C%22%2C%5C%22date%5C%22%3A%5C%222019-01-10T09%3A38%3A13%2B00%3A00%5C%22%2C%5C%22user_question%5C%22%3A%5C%22How+can+I+book+a+flight%3F%5C%22%2C%5C%22log_type%5C%22%3A%5C%22SEARCH%5C%22%2C%5C%22has_matching%5C%22%3Atrue%2C%5C%22matchings%5C%22%3A%5B%7B%5C%22id_content%5C%22%3A25%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A30%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A1%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A13%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A16%2C%5C%22external%5C%22%3Afalse%7D%5D%2C%5C%22user_type%5C%22%3A0%2C%5C%22env%5C%22%3A%5C%22production%5C%22%7D%2C%7B%5C%22event_id%5C%22%3A%5C%22bG9nOjozOTYwNjA5NTAyNjMwMDY5OTI%3D%5C%22%2C%5C%22date%5C%22%3A%5C%222019-01-10T09%3A38%3A06%2B00%3A00%5C%22%2C%5C%22user_question%5C%22%3A%5C%22flight%5C%22%2C%5C%22log_type%5C%22%3A%5C%22SEARCH%5C%22%2C%5C%22has_matching%5C%22%3Atrue%2C%5C%22matchings%5C%22%3A%5B%7B%5C%22id_content%5C%22%3A25%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A4%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A32%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A1%2C%5C%22external%5C%22%3Afalse%7D%2C%7B%5C%22id_content%5C%22%3A37%2C%5C%22external%5C%22%3Afalse%7D%5D%2C%5C%22user_type%5C%22%3A0%2C%5C%22env%5C%22%3A%5C%22production%5C%22%7D%5D%7D%22',
+        },
+        id="url-with-query-with-slash"
+    ),
     pytest.param(
         {
             "signatureKey": 'my-signature-key',
