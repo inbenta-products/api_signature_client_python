@@ -17,8 +17,8 @@ You should load this library using [pip](https://pypi.org/project/pip/).
 ## Locally using pipenv
 If you don't have full access to install dependencies in your environment, you can install this library using [pipenv](https://github.com/pypa/pipenv).
 ```bash
-$ pipenv --python 2.7  # you can also use --python 3.6
-$ pipenv install -e git+git@github.com:inbenta-products/api-signature-client-python.git#egg=inbenta_signature_client
+$ pipenv --python 3.6  # you can also use --python 2.7
+$ pipenv install -e git+https://github.com/inbenta-products/api-signature-client-python.git#egg=inbenta_api_signature_client
 $ pipenv shell
 $ python my-testing-script.py  # or just type `python` to run any code within the python shell
 ```
@@ -26,7 +26,7 @@ $ python my-testing-script.py  # or just type `python` to run any code within th
 ## Globally
 Just run the following command:
 ```bash
-$ pip install -e git+git@github.com:inbenta-products/api-signature-client-python.git#egg=inbenta_signature_client
+$ pip install -e git+https://github.com/inbenta-products/api-signature-client-python.git#egg=inbenta_api_signature_client
 ```
 
 # Usage
